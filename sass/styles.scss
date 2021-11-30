@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body{
+    font-family: 'Big Shoulders Display', cursive;
+    
+}
+.flex{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.paragraph{
+    font-size: 12px;
+    font-family: 'Lexend Deca', sans-serif;
+    padding-bottom: 30px;
+    line-height: 20px;
+  
+    color: var(--Transparent-white);
+}
+h1{
+    color: var(--Very-light-gray);
+}
+a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    // position: absolute;
+    // bottom: 6vh;
+    
+    padding: 8px 15px;
+    background-color: var(--Very-light-gray);
+    border-radius: 25px;
+    transition: all .5s;
+    
+    
+}
+
+.contiene{
+    margin-top: 35px;
+}
+.card__container{
+    display: flex;
+    position: relative;
+    height: 60vh;
+    
+    &-body{
+        // padding-right: 2vw;
+        // padding-left: 2vw;
+        padding: 30px 40px 80px 30px;
+
+        a:hover{
+            color: var(--Very-light-gray);
+            background-color: transparent;
+            box-sizing: border-box;
+            box-shadow: inset 0 0 0 2px var(--Very-light-gray);
+        } 
+        
+    }
+    img{
+        width: 50px;
+        height: 30px;
+    }
+    &-left{
+        background-color: var(--Bright-orange);
+        border-radius: 8px 0 0 8px;
+        
+        a{
+            color: var(--Bright-orange);
+        }
+
+      
+    }
+    
+
+
+    &-center{
+        background-color: var(--Dark-cyan);
+
+        a{
+            color: var(--Dark-cyan);
+        }
+        
+    }
+
+    &-right{
+        background-color: var(--Very-dark-cyan);
+        border-radius: 0 8px 8px 0;
+        a{
+            color: var(--Very-dark-cyan);
+        }
+    }
+
+
+}
+
+@media screen and (max-width:970px){
+
+    .paragraph{
+       
+        padding-bottom: 0px;
+    }
+
+
+    .card__container{
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        
+        &-body{
+            padding: 30px 40px 45px 30px;
+        }
+
+        &-left{
+           
+            border-radius: 8px 8px 0 0;
+          
+        }
+        
+    
+        &-right{
+            border-radius:  0 0 8px 8px;
+        }
+    }
+}
